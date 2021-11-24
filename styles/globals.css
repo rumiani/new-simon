@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    @apply bg-blue-200;
+}
+.btn {
+    @apply py-2 cursor-pointer w-20 h-10 opacity-80 rounded-md hover:font-bold hover:opacity-100 duration-300;
+}
+.play {
+    @apply cursor-pointer bg-green-900 hover:bg-green-300 hover:font-bold duration-300 border-2 w-24 h-24 rounded-full p-2 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2;
+}
+.input {
+    @apply block w-48 p-1 mx-auto rounded-md text-lg text-gray-800 bg-yellow-100 border-2 mb-2;
+}
+.formControl {
+    @apply  w-48   mx-auto text-red-600 -mt-2;
+}
+.submit {
+    @apply  w-24   mx-auto bg-green-600 rounded-md py-1 hover:bg-green-500 cursor-pointer duration-700 hover:font-bold m-1;
+}
