@@ -12,12 +12,11 @@ const Dashboard = () => {
         fetchData(dispatch)
     },[])
     return ( 
-        <div className='xl:w-96 w-full h-5/6 flex flex-col relative'>
+        <div className='w-full h-5/6 flex flex-col relative'>
             {state.loading && <Loading/>}
             {state.error && <ErrorFetch/>}
             {state.data && <TopScores/> }
             {state.data && <Form/> }
-            
         </div>
      );
 }

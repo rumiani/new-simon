@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { DataContext } from "../../../dataContext/dataContext";
-import SignInBtn from "../../menu/signInBtn/signInBtn";
 import SignIn from "./signIn/signIn";
 import SignUp from "./signUp/signUp";
 

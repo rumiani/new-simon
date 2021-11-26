@@ -17,8 +17,14 @@ const initialState = {
   score:0,
   pcArr:[],
   userArr:[],
-  sign:true
-  
+  sign:true,
+  username:null,
+  nameExist:false,
+  nameError:false,
+  passLengthError:false,
+  matchPassError:false,
+  password:null,
+  repeatPassword:null
 };
 
 const reducer = (state = initialState, action) => {
@@ -43,15 +49,15 @@ const reducer = (state = initialState, action) => {
           ...state,
           userArr: [...action.payload]
         };
-    case t.DATA:
-      return {
-        ...state,
-        data: action.payload
-      };
-    case t.DASHBOARD:
-      return {
-        ...state,
-        dashboard: !state.dashboard
+        case t.DATA:
+          return {
+            ...state,
+            data: action.payload
+          };
+          case t.DASHBOARD:
+            return {
+              ...state,
+              dashboard: !state.dashboard
       };
     case t.GAME_OVER:
       return {
@@ -97,6 +103,41 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         sign: !state.sign
+      };
+    case t.NAME_EXIST:
+      return {
+        ...state,
+        nameExist: action.payload
+      };
+    case t.USERNAME:
+      return {
+        ...state,
+        username: action.payload
+      };
+    case t.PASSWORD:
+      return {
+        ...state,
+        password: action.payload
+      };
+    case t.REPEAT_PASSWORD:
+      return {
+        ...state,
+        repeatPassword: action.payload
+      };
+    case t.NAME_ERROR:
+      return {
+        ...state,
+        nameError: action.payload
+      };
+    case t.PASS_LENGTH_ERROR:
+      return {
+        ...state,
+        passLengthError: action.payload
+      };
+    case t.MATCH_PASS_ERROR:
+      return {
+        ...state,
+        matchPassError: action.payload
       };
     default:
       throw new Error();
