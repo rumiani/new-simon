@@ -92,7 +92,7 @@ const reducer = (state = initialState, action) => {
     case t.SIGNEDIN:
       return {
         ...state,
-        signedIn: !state.signedIn
+        signedIn: action.payload
       };
     case t.ERROR:
       return {

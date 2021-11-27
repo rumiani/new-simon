@@ -9,7 +9,7 @@ const Dashboard = () => {
     const {state,dispatch} = useContext(DataContext);
 
     useEffect(() => {      
-        fetchData(dispatch)
+        fetchData({dispatch})
     },[])
     return ( 
         <div className='w-full h-5/6 flex flex-col relative'>

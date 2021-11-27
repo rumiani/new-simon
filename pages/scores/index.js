@@ -10,9 +10,8 @@ const Users = () => {
     const {state,dispatch} = useContext(DataContext);
 
     useEffect(() => {
-        fetchData(dispatch)
+        fetchData({dispatch})
     }, [])
-console.log(state);
     return ( 
         <div className='bg-blue-600 p-4 pb-20 m-auto justify-center md:w-96 w-full h-screen text-center relative'>
             <Head>

@@ -1,6 +1,7 @@
 import * as t from '../dataContext/types'
+import { checkAuthHandler } from './checkAuthHandler'
 const url = 'https://highestscores-7983d-default-rtdb.firebaseio.com/users.json'
-export const fetchData = (dispatch)=>{
+export const fetchData = ({dispatch})=>{
 
     dispatch({type:t.DATA,payload:false})
     dispatch({type:t.LOADING})
@@ -15,6 +16,7 @@ export const fetchData = (dispatch)=>{
         dispatch({type:t.RESULT,payload:result})
         dispatch({type:t.DATA,payload:true})
         dispatch({type:t.LOADING})
+        checkAuthHandler(sortUsers,{dispatch})
         })
       .catch (()=> {
         dispatch({type:t.ERROR})
