@@ -28,11 +28,8 @@ export const userPlayFunc=(e,{state,dispatch})=>{
         console.log('state.pcArr: ',num,state.pcArr);
         console.log('state.userArr: ',num,state.userArr);
         let audioGmaeover = new Audio(d.otherSounds[1])
-        audioGmaeover.play()
+        if(!state.mute) audioGmaeover.play()
         dispatch({type:t.GAME_OVER})
-        setTimeout(() => {
-            alert('Gameover')
-        }, 700);
     }
 
     num++;

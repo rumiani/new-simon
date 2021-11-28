@@ -7,7 +7,7 @@ const TopScores = () => {
     let bestPlayers = [...state.sortUsers].splice(0,3)
 
     return ( 
-        <div className='bg-blue-400 h-1/3 p-2'>
+        <div className=' h-1/3 p-2'>
             <strong>Highest Scores:</strong>
             <ul className={`${classes.scores} w-64 pb-8  m-auto rounded-lg`}>
                 {bestPlayers?.map((player,index) => {

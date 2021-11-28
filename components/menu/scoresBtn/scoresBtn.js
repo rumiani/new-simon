@@ -6,7 +6,7 @@ const Scores = () => {
         <>
             <Link href='./scores'>
             <span className='btn bg-red-700' title='All The Scores'>
-                 All Scores</span>
+                 Scores</span>
             </Link>
         </>
      );

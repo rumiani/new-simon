@@ -8,8 +8,7 @@ const Form = () => {
 
     return ( 
         <div className='h-2/3 bg-blue-400'>
-            {state.sign? <SignIn/>: <SignUp/>}
-            
+            {!state.signIned && state.sign? <SignIn/>: <SignUp/>}
         </div>
      );
 }

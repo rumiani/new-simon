@@ -20,3 +20,4 @@ export const PASS_LENGTH_ERROR = 'PASS_LENGTH_ERROR'
 export const MATCH_PASS_ERROR = 'MATCH_PASS_ERROR'
 export const USERNAME = 'USERNAME'
 export const NAME_EXIST = 'NAME_EXIST'
+ 

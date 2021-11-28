@@ -2,21 +2,18 @@ import Score from "./score/score";
 import ScoresBtn from "./scoresBtn/scoresBtn";
 import SoundBtn from "./soundBtn/soundBtn";
 import { useContext} from "react";
-import GuestBtn from "./guestBtn/guestBtn";
-import SignInBtn from "./signInBtn/signInBtn";
-import SignOutBtn from "./signOutBtn/signOutBtn";
 import { DataContext } from "../../dataContext/dataContext";
+import DashboardBtn from "./dashboardBtn/dashboardBtn";
 const Menu = () => {
     const {state,dispatch} = useContext(DataContext);
-
     return ( 
-            <div className='flex flex-col  w-full h-1/6 bg-gray-500'>    
+            <div className='flex flex-col  w-full h-1/6 bg-gray-500'>
                     <Score/>
-                    <div className='flex flex-row justify-around'>
-                        {state.dashboard ? <GuestBtn/>: state.signIned? <SignOutBtn/>: <SignInBtn/>}
-                        <SoundBtn/>
-                        <ScoresBtn/>
-                    </div>    
+                <div className='flex sm:flex-row justify-around'>
+                    {state.signedIn && !state.dashboard && <DashboardBtn/> }
+                    <SoundBtn/>
+                    <ScoresBtn/>
+                </div>    
             </div>
      );
 }

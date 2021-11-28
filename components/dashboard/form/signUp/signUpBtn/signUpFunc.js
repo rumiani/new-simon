@@ -16,7 +16,13 @@ export const signUpHandler = (e,{state,dispatch})=>{
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({name:state.username,score:0,pass:state.password})      
+        }).then( res => {
+            // if(res.status === 200){
+                localStorage.setItem('user',JSON.stringify({name:state.username,pass:state.password}))
+                fetchData({dispatch})
+            // }
+        }).catch (()=> {
+            dispatch({type:t.ERROR})
+            dispatch({type:t.LOADING})
         })
-        localStorage.setItem('user',JSON.stringify({name:state.username,pass:state.password}))
-        fetchData({dispatch})
 }

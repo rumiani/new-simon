@@ -16,9 +16,9 @@ const squerAction = ({state,dispatch}) => {
   let audio = new Audio()
   if(i<state.pcArr.length){
     let squerID = state.pcArr[i]
-    console.log(squerID);
+
     audio.src=d.srcSound[squerID]
-    audio.play();
+    if(!state.mute) audio.play();
     document.getElementById(squerID).classList.add('border-4')
     setTimeout(() => {
       document.getElementById(squerID).classList.remove('border-4')

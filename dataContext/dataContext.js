@@ -57,7 +57,7 @@ const reducer = (state = initialState, action) => {
           case t.DASHBOARD:
             return {
               ...state,
-              dashboard: !state.dashboard
+              dashboard: action.payload
       };
     case t.GAME_OVER:
       return {
@@ -77,7 +77,7 @@ const reducer = (state = initialState, action) => {
     case t.LOADING:
       return {
         ...state,
-        loading: !state.loading
+        loading: action.payload
       };
     case t.MUTE:
       return {
