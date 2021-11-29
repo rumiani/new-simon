@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import * as d from '../../data/data'
 import { DataContext } from '../../dataContext/dataContext';
-import Gameover from './gameoverold/gameover';
+import GameOver from '../../components/gameOver/gameOver';
 import Play from "./play/play"
-import { userPlayFunc } from './userPlayFunc/userPlayFunc'
+import { userPlayFunc } from './play/userPlayFunc/userPlayFunc';
 
 const Squers = () => {
   const {state,dispatch} = useContext(DataContext);
@@ -16,7 +16,7 @@ const Squers = () => {
             ></span>
           })}     
           <Play/>      
-          {state.gameOver && <Gameover/>}
+          {state.gameOver && <GameOver/>}
         </div>
      );
 }

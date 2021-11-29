@@ -1,5 +1,5 @@
-import * as t from '../../../dataContext/types'
-import * as d from '../../../data/data'
+import * as t from '../../../../dataContext/types'
+import * as d from '../../../../data/data'
 let i;
 export const pcPlayFunc = ({state,dispatch}) => {
   i = 0;
@@ -29,6 +29,8 @@ const squerAction = ({state,dispatch}) => {
 
 // determine the who's turn it is
   if(i===state.pcArr.length){
-    dispatch({type:t.MY_TURN})
+    // console.log(state);
+    dispatch({type:t.MY_TURN,payload:true})
+    dispatch({type:t.PLAY,payload:true})
     }
 }

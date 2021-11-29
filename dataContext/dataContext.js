@@ -62,12 +62,12 @@ const reducer = (state = initialState, action) => {
     case t.GAME_OVER:
       return {
         ...state,
-        gameOver: !state.gameOver
+        gameOver: action.payload
       };
     case t.PLAY:
       return {
         ...state,
-        play: !state.play
+        play: action.payload
       };
     case t.SCORE:
       return {
@@ -87,7 +87,7 @@ const reducer = (state = initialState, action) => {
     case t.MY_TURN:
       return {
         ...state,
-        myTurn: !state.myTurn
+        myTurn: action.payload
       };
     case t.SIGNEDIN:
       return {
