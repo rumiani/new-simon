@@ -1,6 +1,7 @@
 import Score from "./score/score";
 import ScoresBtn from "./scoresBtn/scoresBtn";
 import SoundBtn from "./soundBtn/soundBtn";
+import AsGuest from "./asGuest/asGuest";
 import { useContext} from "react";
 import { DataContext } from "../../dataContext/dataContext";
 import DashboardBtn from "./dashboardBtn/dashboardBtn";
@@ -10,7 +11,8 @@ const Menu = () => {
             <div className='flex flex-col  w-full h-1/6 bg-gray-500'>
                     <Score/>
                 <div className='flex sm:flex-row justify-around'>
-                    {state.signedIn && !state.dashboard && <DashboardBtn/> }
+                    {!state.dashboard && <DashboardBtn/> }
+                    {!state.signedIn && state.dashboard && <AsGuest/> }
                     <SoundBtn/>
                     <ScoresBtn/>
                 </div>    
