@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { DataContext } from "../../../../dataContext/dataContext";
 import * as t from '../../../../dataContext/types'
 import InputName from "./inputName/inputName";
-import InputPass from "./InputPass/InputPass";
+import InputPass from "./inputPass/inputPass";
 import InputRepeatPass from "./inputRepeatPass/inputRepeatPass";
 import SignUpBtn from "./signUpBtn/signUpBtn";
 
