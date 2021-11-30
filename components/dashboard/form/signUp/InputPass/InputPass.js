@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../../../../../dataContext/dataContext";
 import { repeatPassHandler } from "../inputRepeatPass/repeatPassHandler";
-import { passLengthHandler } from "./passLengthHandler";
 
 const InputPass = () => {
     const {state,dispatch} = useContext(DataContext);    
