@@ -8,6 +8,7 @@ const initialState = {
   data:false,
   loading:false,
   error: false,
+  
   dashboard:true,
   signedIn:false,
   mute:false,
@@ -24,7 +25,8 @@ const initialState = {
   passLengthError:false,
   matchPassError:false,
   password:null,
-  repeatPassword:null
+  repeatPassword:null,
+  currectPass:false
 };
 
 const reducer = (state = initialState, action) => {
@@ -133,6 +135,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         passLengthError: action.payload
+      };
+    case t.CURRECT_PASS:
+      return {
+        ...state,
+        currectPass: action.payload
       };
     case t.MATCH_PASS_ERROR:
       return {

@@ -3,7 +3,7 @@ import { DataContext } from "../../../../dataContext/dataContext";
 import * as t from '../../../../dataContext/types'
 import InputName from "./inputName/inputName";
 import InputPass from "./InputPass/InputPass";
-import InputRepeatPass from "./InputRepeatPass/InputRepeatPass";
+import InputRepeatPass from "./inputRepeatPass/inputRepeatPass";
 import SignUpBtn from "./signUpBtn/signUpBtn";
 
 const SignUp = () => {
@@ -15,7 +15,6 @@ const SignUp = () => {
                 <InputName />                
                 <InputPass/>
                 <InputRepeatPass/>
-                
                 <SignUpBtn/>
             </form>
             <div >Already have an account? 

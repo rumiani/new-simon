@@ -12,5 +12,4 @@ export const checkAuthHandler = (sortUsers,{dispatch}) => {
             // dispatch({type:t.DASHBOARD,payload:false})
         }
     }
-    // console.log(user.name, localObj.name);
 }

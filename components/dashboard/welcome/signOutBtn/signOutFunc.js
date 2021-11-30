@@ -1,5 +1,5 @@
 import * as t from '../../../../dataContext/types'
 export const signOutFunc = ({dispatch}) => {
     localStorage.clear()
-    dispatch({type:t.DASHBOARD,payload:true})
+    dispatch({type:t.SIGNEDIN,payload:false})
 }

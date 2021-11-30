@@ -30,9 +30,7 @@ export const userPlayFunc=(e,{state,dispatch})=>{
           dispatch({type:t.USER_ARR,payload:[]})
       }, 1000);
     }
-            // return
-            // }
-            console.log(state.pcArr[num],state.userArr[num]);
+
     if(state.pcArr[num] !== state.userArr[num]){
       postHandler({state,dispatch})
       gameOverFunc({state,dispatch})
@@ -49,7 +47,7 @@ export const userPlayFunc=(e,{state,dispatch})=>{
     let audio = new Audio()
     audio.src = d.srcSound[e.target.id]
   audio.play()
-  if(state.muteMode){audio.volume=0}
+  if(state.mute){audio.volume=0}
   e.target.classList.add('border-4')
   // }
   setTimeout(() => {
