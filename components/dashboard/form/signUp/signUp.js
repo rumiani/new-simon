@@ -8,6 +8,14 @@ import SignUpBtn from "./signUpBtn/signUpBtn";
 
 const SignUp = () => {
     const {state,dispatch} = useContext(DataContext);
+    const switchSignHandler = () =>{
+        dispatch({type:t.SIGN})
+        dispatch({type:t.USERNAME,payload:null})
+        dispatch({type:t.PASSWORD,payload:null})
+        dispatch({type:t.REPEAT_PASSWORD,payload:null})
+        dispatch({type:t.NAME_EXIST,payload:false})
+
+    }
     return ( 
         <div className='w-max m-auto'>
             <h2><strong>SIGN UP</strong></h2>
@@ -18,7 +26,7 @@ const SignUp = () => {
                 <SignUpBtn/>
             </form>
             <div >Already have an account? 
-                <span onClick={() => dispatch({type:t.SIGN})}
+                <span onClick={() => switchSignHandler({state,dispatch})}
                 className='underline text-blue-800 font-bold cursor-pointer hover:scale-105 duration-500 m-2'>
                     Sign in
                 </span>

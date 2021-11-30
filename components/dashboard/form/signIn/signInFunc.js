@@ -1,6 +1,7 @@
 import * as t from '../../../../dataContext/types'
 export const signInFunc = (e,{state,dispatch}) =>{
     e.preventDefault()
+    console.log(state);
     let user = state.sortUsers.filter ( user =>  user.name.toUpperCase() === state.username.toUpperCase() )[0]
     // user validation
     // check if the name exist

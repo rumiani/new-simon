@@ -16,7 +16,7 @@ const InputName = () => {
                     </p>
             }
 
-            { state.nameExist && !state.sign&&
+            { state.nameExist &&
                     <p className='text-red-700 font-bold text-sm -mt-2'>
                         Already exist.
                     </p>

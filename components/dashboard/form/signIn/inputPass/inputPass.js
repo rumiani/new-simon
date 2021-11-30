@@ -6,7 +6,7 @@ import { DataContext } from "../../../../../dataContext/dataContext";
 const InputPass = () => {
     const {state,dispatch} = useContext(DataContext);   
     const changeHandler = (e,{state,dispatch}) =>{
-        dispatch({type:t.CURRECT_PASS,payload:false})
+        dispatch({type:t.CURRECT_PASS,payload:true})
         dispatch({type:t.PASSWORD,payload:e.target.value})
     }
     return ( 
@@ -16,7 +16,7 @@ const InputPass = () => {
                     placeholder='Password'
                     onChange={(e) => changeHandler(e,{state,dispatch})}
                 />
-                { state.currectPass &&
+                { !state.currectPass &&
                     <p className='text-red-700 font-bold text-sm -mt-2'>
                         Wrong password
                     </p>

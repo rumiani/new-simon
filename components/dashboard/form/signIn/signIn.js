@@ -6,6 +6,12 @@ import InputPass from './inputPass/inputPass';
 import { signInFunc } from './signInFunc';
 const SignIn = () => {
     const {state,dispatch} = useContext(DataContext);
+    const switchSignHandler = () =>{
+        dispatch({type:t.SIGN})
+        dispatch({type:t.USERNAME,payload:null})
+        dispatch({type:t.PASSWORD,payload:null})
+        dispatch({type:t.NAME_EXIST,payload:false})
+    }
     return ( 
         <div className='pt-12'>
             <h2><strong>SIGN IN</strong></h2>
@@ -17,7 +23,7 @@ const SignIn = () => {
                 >
                     Sign in</button>
                 <div className='underline text-blue-800 font-bold cursor-pointer hover:scale-105 duration-500'
-                onClick={() => dispatch({type:t.SIGN})} >
+                onClick={() => switchSignHandler({state,dispatch})} >
                     Create an account</div>
             </form>
         </div>
