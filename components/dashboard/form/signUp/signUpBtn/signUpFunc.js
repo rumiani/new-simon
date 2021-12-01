@@ -10,7 +10,9 @@ export const signUpHandler = (e,{state,dispatch})=>{
     if(state.nameError) return console.log('state.nameError: ',state.nameError);
     if(state.passLengthError) return console.log('state.passLengthError: ',state.passLengthError);
     if(state.matchPassError) return console.log('state.matchPassError: ',state.matchPassError);
-if(state.username === null ) return dispatch({type:t.NAME_ERROR,payload:true})
+console.log(state);
+    if(state.username === null ) return dispatch({type:t.NAME_ERROR,payload:true})
+if(state.password !== state.repeatPassword ) return dispatch({type:t.NAME_ERROR,payload:true})
         // props.menuHandler()
         fetch('https://highestscores-7983d-default-rtdb.firebaseio.com/users.json', {
             method: 'POST', // or 'PUT'

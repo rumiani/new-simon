@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { DataContext } from "../../../../../dataContext/dataContext";
-import { repeatPassHandler } from "../inputRepeatPass/repeatPassHandler";
+// import { repeatPassHandler } from "../inputRepeatPass/repeatPassHandler";
 import { passLengthHandler } from "./passLengthHandler";
 
 const InputPass = () => {
@@ -9,7 +9,8 @@ const InputPass = () => {
         <>
             <label className='flex' htmlFor="password">Password</label>
                 <input className='input' type="password" id='password' name='password' 
-                    placeholder='Password' onChange={(e) => repeatPassHandler(e,{state,dispatch})}
+                    placeholder='Password' 
+                    // onChange={(e) => repeatPassHandler(e,{state,dispatch})}
                     onChange={(e) => passLengthHandler(e,{state,dispatch})}
                 />
                 { state.passLengthError &&
