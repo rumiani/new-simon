@@ -4,6 +4,7 @@ import { checkNameHandler } from "./checkNameHandler";
 
 const InputName = () => {
     const {state,dispatch} = useContext(DataContext);
+    console.log(state.sign)
 
     return ( 
         <>

@@ -13,7 +13,7 @@ const SignUp = () => {
         dispatch({type:t.USERNAME,payload:null})
         dispatch({type:t.PASSWORD,payload:null})
         dispatch({type:t.REPEAT_PASSWORD,payload:null})
-        dispatch({type:t.NAME_EXIST,payload:false})
+        dispatch({type:t.NAME_EXIST,payload:null})
 
     }
     return ( 

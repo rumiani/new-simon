@@ -16,7 +16,7 @@ const InputPass = () => {
                     placeholder='Password'
                     onChange={(e) => changeHandler(e,{state,dispatch})}
                 />
-                { !state.currectPass && state.sign &&
+                { state.nameExist === false  &&
                     <p className='text-red-700 font-bold text-sm -mt-2'>
                         Wrong password
                     </p>

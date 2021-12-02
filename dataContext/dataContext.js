@@ -20,7 +20,7 @@ const initialState = {
   userArr:[],
   sign:true,
   username:null,
-  nameExist:false,
+  nameExist:null,
   nameError:false,
   passLengthError:false,
   matchPassError:false,
