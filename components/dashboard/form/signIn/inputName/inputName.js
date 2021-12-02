@@ -12,7 +12,7 @@ const InputName = () => {
             <label className='flex' htmlFor="username">Username</label>
             <input className='input' type="text" id='username' name='username' placeholder='Username' 
             onChange={(e) => nameChangeHandler(e,{state,dispatch})}/>
-            { !state.nameExist &&
+            { !state.nameExist && state.sign &&
                     <p className='text-red-700 font-bold text-sm -mt-2'>
                         Doesn't exist
                     </p>
