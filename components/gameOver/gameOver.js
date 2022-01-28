@@ -12,7 +12,7 @@ const GameOver = () => {
             <br /> <strong>Your Score: {state.score}</strong>
             <br />
             {state.signedIn?'Your score has been recorded':
-            "Sorry your score hasn't been recorded. To record your score you need to use a VPN"}
+            "Sorry your score hasn't been recorded. To record your score you need to sign up"}
             <br />
             <button className='btn bg-green-600 mt-32'
             onClick={() => tryAgainFunc({state,dispatch})}>
